@@ -14,19 +14,20 @@
 #include <string.h>
 
 int main(){
-	char *q = NULL;
-	printf("Requesting space for **Goodbye** \n");
-	q = (char*)malloc(strlen("Goodbye")+ 1);
+	char *q = NULL; // se declara un puntero a char con NULL 
+	printf("Requesting space for **Goodbye** \n"); // Se explica que se esta haciendo a continuacion
+	q = (char*)malloc(strlen("Goodbye")+ 1); // se solicita espacio en memoria con la cantidad de bits que ocupa la cadena "Goodbye" mas 1 bit del caracter nulo (para ser un string)
 
-	if(!q){
-		perror("Failed to allocate space because");
-		exit(1);
+	if(!q){ // si no se pudo asignar memoria se sale del programa y se imprime un mensaje de error
+		perror("Failed to allocate space because"); // mensaje de error
+		exit(1); // exit 1 indicando al sistema operativo error 
 	}
 
-	printf("About to copy **Goodbye** to q at address %s\n", q);
-	strcpy(q, "Goodbye");
-	printf("String copied\n");
-	printf("%s\n", q);
-	return 0;
-
+	printf("About to copy **Goodbye** to q at address %s\n", q); // indica la accion a seguir
+	strcpy(q, "Goodbye"); // Copia goodbye en q 
+	printf("String copied\n"); // mensaje de confirmacion
+	printf("%s\n", q); // muestra el contenido de q = "Goodbye"
+	
+	
+	return 0; // termina el programa
 }
