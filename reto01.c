@@ -16,16 +16,16 @@
 int main(){
 	
     char *p; // Se declara un puntero a char
-    char *q = NULL; // Se declara un puntero a char y se inicializa en NULL
+    char *q = NULL; // Se declara otro puntero a char y se inicializa en NULL
 
-    printf("Adress of p = %s\n", p); // Se imprime la dirección de p
+    printf("Adress of p = %s\n", p); // Se muestra la direccion de memoria actual de p
 
-    strcpy(p, "Hello im the best in Operating Systems!!!");
-    printf("%s\n", p);
-    printf("About to copy **Goodbye** to q\n");
-    strcpy(q, "Goodbye");
-    printf("string copied\n");
-    printf("%s\n", q);
+    strcpy(p, "Hello im the best in Operating Systems!!!"); // Se utiliza strcpy para copiar la cadena en p  (variable, valor)
+    printf("%s\n", p); // Se imprime en consola el contenido de p con el especificador de formato %s para cadena de caracteres
+    printf("About to copy **Goodbye** to q\n"); // Se escribe el siguiente paso a seguir con el puntero q
+    strcpy(q, "Goodbye"); // Se copia "Goodbye" en q
+    printf("string copied\n"); // Se imprime en consola que la cadena fue copiada
+    printf("%s\n", q); // Se imprime el valor de q ("Goodbye")
 
     return 0;
 }
