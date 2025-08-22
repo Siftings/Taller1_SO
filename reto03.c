@@ -14,18 +14,16 @@
 #include <stdlib.h>
 
 int main(){
-	int *ptr;
-	ptr = malloc(15*sizeof(*ptr)); // Un puntero de int ocupa 4 bits, * 15 =  15 bits de espacio allocated
-	
-	if (ptr != NULL){
-		*(ptr + 5) = 480;
-		printf("%d\n",*(ptr+5));
+	int *ptr; // crea un puntero a int, sin inicializar
+	ptr = malloc(15*sizeof(*ptr)); // Un puntero de int ocupa 64 bits, * 15 =  960 bits de espacio allocated
+
+	if (ptr != NULL){ // si se pudo asignar memoria
+		*(ptr + 5) = 480; // se asigna el valor 480 a la posicion 5
+		printf("%d\n",*(ptr+5)); // se imprime el valor de la posicion 5
 	}
 
 
-	return 0;
-
-
+	return 0; // termina el programa
 
 }
 
